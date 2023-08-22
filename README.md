@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Global Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple app to visualize data points on the globe.
 
 ## Available Scripts
 
