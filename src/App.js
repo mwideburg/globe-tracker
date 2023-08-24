@@ -1,4 +1,4 @@
-import EarthGlobe from "./Globe.js"
+import EarthGlobe from "./components/globe/Globe"
 import './App.css';
 
 function App() {
