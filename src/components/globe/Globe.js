@@ -43,14 +43,14 @@ function EarthGlobe() {
     let iss;
     const loader = new GLTFLoader();
     const EARTH_RADIUS = 6371; // Earth radius in kilometers
-    const ISS_ALTITUDE = 420; // average altitude of ISS in kilometers (this is an approximation)
+    const ISS_ALTITUDE = 50; // average altitude of ISS in kilometers (this is an approximation)
     function latLongToVector3(lat, lon, radius) {
       const phi = (90 - lat) * (Math.PI / 180);
       const theta = (lon + 180) * (Math.PI / 180);
 
       const x = -(radius * Math.sin(phi) * Math.cos(theta));
       const y = radius * Math.cos(phi);
-      const z = radius * Math.sin(phi) * Math.sin(theta);
+      const z = (radius * Math.sin(phi) * Math.sin(theta)) + ISS_ALTITUDE
 
       return new THREE.Vector3(x, y, z);
     }
@@ -58,7 +58,7 @@ function EarthGlobe() {
     loader.load(ISSPath, function (object) {
       console.log(object);
       iss = object.scene;
-      iss.scale.set(0.2, 0.2, 0.2);
+      iss.scale.set(0.4, 0.4, 0.4);
 
       // We'll use an example latitude and longitude for this case.
       const latitude = 0; // replace with actual latitude
@@ -66,11 +66,13 @@ function EarthGlobe() {
       const position = latLongToVector3(
         latitude,
         longitude,
-        EARTH_RADIUS + ISS_ALTITUDE
+        EARTH_RADIUS
       );
 
       iss.position.set(position.x, position.y, position.z);
       iss.lookAt(new THREE.Vector3(0, 0, 0));
+      iss.rotateY(90)
+      iss.rotateY(Math.PI);
       scene.add(iss);
     });
 
