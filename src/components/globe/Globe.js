@@ -76,17 +76,6 @@ function EarthGlobe() {
       scene.add(iss);
     });
 
-    // function latLongToVector3(latitude, longitude, radius) {
-    //   const lat = THREE.MathUtils.degToRad(90 - latitude);
-    //   const lon = THREE.MathUtils.degToRad(longitude);
-
-    //   const x = radius * Math.sin(lat) * Math.cos(lon);
-    //   const y = radius * Math.cos(lat);
-    //   const z = radius * Math.sin(lat) * Math.sin(lon);
-
-    //   return new THREE.Vector3(x, y, z);
-    // }
-
     const updateIssLocation = async () => {
       try {
         return axios.get("http://api.open-notify.org/iss-now.json");
