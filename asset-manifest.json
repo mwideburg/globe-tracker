@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/globe-tracker/static/css/main.073c9b0a.css",
+    "main.js": "/globe-tracker/static/js/main.6dc07d9b.js",
+    "static/js/787.5f2bbd27.chunk.js": "/globe-tracker/static/js/787.5f2bbd27.chunk.js",
+    "static/media/ISS_stationary.glb": "/globe-tracker/static/media/ISS_stationary.b375df467a38c492e54b.glb",
+    "index.html": "/globe-tracker/index.html",
+    "main.073c9b0a.css.map": "/globe-tracker/static/css/main.073c9b0a.css.map",
+    "main.6dc07d9b.js.map": "/globe-tracker/static/js/main.6dc07d9b.js.map",
+    "787.5f2bbd27.chunk.js.map": "/globe-tracker/static/js/787.5f2bbd27.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.6dc07d9b.js"
+  ]
+}
